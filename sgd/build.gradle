@@ -1,0 +1,22 @@
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'org.puder.activitymonitor.main.Main'
+
+tasks.run.workingDir = new File('..')
+
+targetCompatibility = '1.7'
+sourceCompatibility = '1.7'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile project(':ann')
+    compile 'org.nd4j:nd4j-native-platform:0.8.0'
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.opencsv:opencsv:3.8'
+    compile 'org.slf4j:slf4j-nop:1.7.25'
+}
